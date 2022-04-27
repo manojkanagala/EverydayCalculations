@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter_the_original_price">Enter the Original Price</string>
+    <string name="enter_the_discount_percentage">Enter the Discount Percentage</string>
+    <string name="calculate">Calculate</string>
+    <string name="your_discounted_amount">Your discounted Amount :</string>
+    <string name="you_pay">You Pay :</string>
+    <string name="enter_valid_value">Please Enter a Valid Value</string>
+</resources>
