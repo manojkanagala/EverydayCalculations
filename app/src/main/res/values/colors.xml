@@ -9,5 +9,12 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red_400">#EF5350</color>
     <color name="red_500">#F44336</color>
-    <color name="red_600">#E53935</color>
+    <color name="red_600">#E53935</color>]
+    <color name="green">#1B5E20</color>
+    <color name="green_dark">#003300</color>
+    <color name="green_light">#A5D6A7</color>
+    <color name="shrine_pink_100">#FEDBD0</color>
+    <color name="shrine_pink_50">#FEEAE6</color>
+
+
 </resources>

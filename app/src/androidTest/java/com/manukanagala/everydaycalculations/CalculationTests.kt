@@ -22,15 +22,15 @@ class CalculationTests {
 
     @Test
     fun calculate_20_discount(){
-        onView(withId(R.id.original_price_edit_text))
+        onView(withId(R.id.original_amount_edit_text))
             .perform(typeText("20")).perform(ViewActions.closeSoftKeyboard())
 
-        onView(withId(R.id.discount_percentage_edit_text))
+        onView(withId(R.id.tip_percentage_edit_text))
             .perform(typeText("20")).perform(ViewActions.closeSoftKeyboard())
 
         onView(withId(R.id.calculate)).perform(click())
 
-        onView(withId(R.id.discounted_amount)).check(matches(withText(containsString("4"))))
+        onView(withId(R.id.tip_amount)).check(matches(withText(containsString("4"))))
 
         onView(withId(R.id.final_amount)).check(matches(withText(containsString("16"))))
 

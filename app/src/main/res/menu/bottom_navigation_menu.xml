@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/discount"
+        android:enabled="true"
+        android:icon="@drawable/ic_discount"
+        android:title="@string/discount" />
+    <item
+        android:id="@+id/tip"
+        android:enabled="true"
+        android:icon="@drawable/ic_service"
+        android:title="@string/tip" />
+
+    <item
+        android:id="@+id/emi"
+        android:enabled="true"
+        android:icon="@drawable/ic_bank"
+        android:title="@string/emi" />
+
+</menu>

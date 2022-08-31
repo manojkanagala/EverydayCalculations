@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".fragments.DiscountFragment">
+
+        <!--Image view for the money Icon !-->
+        <ImageView
+            android:id="@+id/icon_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_money"
+            android:importantForAccessibility="no"
+            app:layout_constraintTop_toTopOf="@id/original_price"
+            app:layout_constraintBottom_toBottomOf="@id/original_price"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--Material Design Edit Text to capture the Original amount !-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/original_price"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/icon_money"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="@string/enter_the_original_price">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/original_price_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Image view for the discount Icon !-->
+        <ImageView
+            android:id="@+id/icon_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_discount"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/discount_percentage"
+            app:layout_constraintBottom_toBottomOf="@id/discount_percentage" />
+
+        <!--Material design Edit text to capture the Discount Percentage !-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/discount_percentage"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/icon_discount"
+            app:layout_constraintTop_toBottomOf="@id/original_price"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:hint="@string/enter_the_discount_percentage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/discount_percentage_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button to calculate the discount and final amounts !-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/discount_percentage"
+            app:layout_constraintStart_toStartOf="@id/discount_percentage"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/calculate" />
+
+        <!-- Text view to display the discounted amount text !-->
+        <TextView
+            android:id="@+id/discount_amount_text"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/calculate"
+            android:text="@string/your_discounted_amount" />
+
+        <!--Text view to display the discounted amount value !-->
+        <TextView
+            android:id="@+id/discount_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="" />
+
+        <!--Text view to display the final amount text!-->
+        <TextView
+            android:id="@+id/final_amount_text"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/discount_amount_text"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/calculate"
+            android:text="@string/you_pay" />
+
+        <!--Text view to display the final amount !-->
+        <TextView
+            android:id="@+id/final_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/discount_amount"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

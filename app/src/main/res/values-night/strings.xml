@@ -6,4 +6,7 @@
     <string name="your_discounted_amount">Your discounted Amount :</string>
     <string name="you_pay">You Pay :</string>
     <string name="enter_valid_value">Please Enter a Valid Value</string>
+    <string name="discount">Discount</string>
+    <string name="tip">Tip</string>
+    <string name="emi">EMI</string>
 </resources>

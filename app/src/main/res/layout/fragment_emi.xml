@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".fragments.EmiFragment">
+
+        <!--Image view for the Store Icon !-->
+        <ImageView
+            android:id="@+id/icon_store"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_store"
+            android:importantForAccessibility="no"
+            app:layout_constraintTop_toTopOf="@id/loan_amount"
+            app:layout_constraintBottom_toBottomOf="@id/loan_amount"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--Material Design Edit Text to capture the Loan amount !-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loan_amount"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/icon_store"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="@string/enter_the_loan_amount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loan_amount_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Image view for the Percentage Icon !-->
+        <ImageView
+            android:id="@+id/icon_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_percent"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/interest_percentage"
+            app:layout_constraintBottom_toBottomOf="@id/interest_percentage" />
+
+        <!--Material design Edit text to capture the Interest Percentage !-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/interest_percentage"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/icon_service"
+            app:layout_constraintTop_toBottomOf="@id/loan_amount"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:hint="@string/enter_the_interest_percentage">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/interest_percentage_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Image view for the Calendar Icon !-->
+        <ImageView
+            android:id="@+id/icon_tenure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_calendar"
+            android:importantForAccessibility="no"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/loan_tenure"
+            app:layout_constraintBottom_toBottomOf="@id/loan_tenure" />
+
+        <!--Material design Edit text to capture the loan tenure !-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loan_tenure"
+            android:layout_width="275dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/icon_tenure"
+            app:layout_constraintTop_toBottomOf="@id/interest_percentage"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:hint="@string/enter_the_loan_tenure">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/loan_tenure_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button to calculate the discount and final amounts !-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/loan_tenure"
+            app:layout_constraintStart_toStartOf="@id/loan_tenure"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/calculate" />
+
+        <!-- Text view to display the tip amount text !-->
+        <TextView
+            android:id="@+id/your_interest_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/calculate"
+            android:text="@string/your_interest_amount" />
+
+        <!--Text view to display the tip amount value !-->
+        <TextView
+            android:id="@+id/interest_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/calculate"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="" />
+
+        <!--Text view to display the Emi amount text!-->
+        <TextView
+            android:id="@+id/your_emi_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/your_interest_amount"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/calculate"
+            android:text="@string/your_emi_amount" />
+
+        <!--Text view to display the Emi amount !-->
+        <TextView
+            android:id="@+id/emi_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/interest_amount"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="" />
+
+        <!--Text view to display the final amount text!-->
+        <TextView
+            android:id="@+id/your_final_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/your_emi_amount"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/calculate"
+            android:text="@string/your_total_amount" />
+
+        <!--Text view to display the final amount !-->
+        <TextView
+            android:id="@+id/final_amount"
+            style="@style/Widget.EverydayCalculations.Textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/emi_amount"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

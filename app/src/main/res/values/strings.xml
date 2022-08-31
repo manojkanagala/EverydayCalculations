@@ -6,4 +6,26 @@
     <string name="your_discounted_amount">Your discounted Amount :</string>
     <string name="you_pay">You Pay :</string>
     <string name="enter_valid_value">Please Enter a Valid Value</string>
+
+    <!-- Tip Calculator Values!-->
+    <string name="enter_the_original_amount">Enter the total Amount</string>
+    <string name="enter_the_tip_percentage">Enter the Tip Percentage</string>
+    <string name="your_tip_amount">Your Tip Amount :</string>
+    <string name="your_final_amount">Your Final Amount :</string>
+
+    <!-- EMI Calculator Values !-->
+    <string name="enter_the_loan_amount">Enter the Loan Amount</string>
+    <string name="enter_the_interest_percentage">Enter the Interest Percentage</string>
+    <string name="enter_the_loan_tenure">Enter the Loan Tenure In Months</string>
+    <string name="your_interest_amount">Your Interest Amount :</string>
+    <string name="your_emi_amount">Your Monthly Emi :</string>
+    <string name="your_total_amount">Your final Amount :</string>
+    <string name="accept">Accept</string>
+    <string name="alert_title">Note</string>
+    <string name="info_message">The calculated amounts are a mere estimate and are not your final amounts.
+        Please verify with your lenders to get the accurate amounts </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="discount">Discount</string>
+    <string name="tip">Tip</string>
+    <string name="emi">EMI</string>
 </resources>

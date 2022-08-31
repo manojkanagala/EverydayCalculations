@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emi"
+    app:startDestination="@id/nav_emi">
+
+    <fragment
+        android:id="@+id/nav_emi"
+        android:label="@string/emi"
+        android:name="com.manukanagala.everydaycalculations.fragments.EmiFragment"
+        tools:layout="@layout/fragment_emi">
+        <action
+            android:id="@+id/emi_fragment"
+            app:destination="@id/emi" />
+    </fragment>
+
+</navigation>
